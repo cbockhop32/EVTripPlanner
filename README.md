@@ -19,9 +19,11 @@ Run the provided bash script to compile the program: ./build.sh
 ./solution [name of csv file].csv [Charger Name 1] [Charger Name 2]
 
 Example:  
+
 ./solution network.csv Hawthorne_CA Bozeman_MT
 
 Output:
+
 Hawthorne_CA
 
 Barstow_CA - 11.53 Minutes Charging Time
