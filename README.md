@@ -23,11 +23,19 @@ Example:
 
 Output:
 Hawthorne_CA
+
 Barstow_CA - 11.53 Minutes Charging Time
+
 Las_Vegas_NV - 17.16 Minutes Charging Time
+
 St._George_UT - 13.02 Minutes Charging Time
+
 Beaver_UT - 11.25 Minutes Charging Time
+
 Tooele_UT - 20.43 Minutes Charging Time
+
 Tremonton_UT - 8.56 Minutes Charging Time
+
 Idaho_Falls_ID - 14.81 Minutes Charging Time
+
 Bozeman_MT
