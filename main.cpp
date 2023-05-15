@@ -19,16 +19,15 @@ int main(int argc, char** argv)
 {
     if (argc != 4)
     {
-        cout << "Error: requires csv path, initial supercharger names, and final supercharger names" << endl;        
+        cout << "ERROR: Requires CSV file path, start charger, and end charger locations" << endl;        
         return -1;
     }
 
-    stack<int> shortestPath;
+    vector<int> shortestPath;
     
     string charger_csv_path = argv[1];
     string initial_charger_name = argv[2];
     string goal_charger_name = argv[3];
-
 
     vector<tuple<string,double,double >> listOfChargers = getChargersFromFile(charger_csv_path, initial_charger_name, goal_charger_name);
 
@@ -37,7 +36,6 @@ int main(int argc, char** argv)
     Network newNetwork;
     newNetwork.buildChargerNetwork(listOfChargers);
     newNetwork.addEdgesToChargerNetwork(VEHICLE_RANGE);
-    // newNetwork.printNetwork();
     
     shortestPath = newNetwork.calculateShortestDistance(initial_charger_name, goal_charger_name);
     printShortestPath(shortestPath, newNetwork, initial_charger_name, goal_charger_name);

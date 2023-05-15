@@ -4,22 +4,10 @@
 class Edge {
     public:
         Edge(){};
-        Edge(int destID, int dist) 
-        {
-            destChargerID = destID;
-            distance = dist;
-        }
-
-        int getDistance()
-        {
-            return distance;
-        }
-
-        int getDestChargerID()
-        {
-            return destChargerID;
-        }
-
+        Edge(int destID, int dist);
+        int getDistance();
+        int getDestChargerID();
+      
     public:
         int destChargerID;
         int distance;

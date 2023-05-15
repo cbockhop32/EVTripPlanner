@@ -53,14 +53,14 @@ vector<tuple<string,double,double>> getChargersFromFile(string csvPath, string s
     return chargerList;
 }
 
-void printShortestPath(stack<int> path, Network chargingNetwork, string startingChargerName, string endingChargerName)
+void printShortestPath(vector<int> path, Network chargingNetwork, string startingChargerName, string endingChargerName)
 {
    Charger prev = chargingNetwork.getChargerByName(startingChargerName);
 
     while(!path.empty())
     {
-        int curr = path.top();
-        path.pop();
+        int curr = path.back();
+        path.pop_back();
         Charger charger = chargingNetwork.getChargerByID(curr);
 
         // Calculating the distance between the two chargers
